@@ -5,5 +5,5 @@
 
 [[redirects]]
   from = "/*"
-  to = "/index.html"  # Entry point for static files or templates
+  to = "/base.html"  # Entry point for static files or templates
   status = 200
