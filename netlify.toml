@@ -1,0 +1,9 @@
+[build]
+  # Specify the root directory containing your Flask app
+  publish = "static"  # Location of your static files
+  command = "python3 -m flask run"  # Command to run your Flask app
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"  # Entry point for static files or templates
+  status = 200

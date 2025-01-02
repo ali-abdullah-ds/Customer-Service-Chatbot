@@ -3,7 +3,9 @@ from chat import get_response
 from flask_cors import CORS
 
 
-app = Flask(__name__)
+app = Flask(__name__, 
+            static_folder="static",  # Folder for CSS, JS, images
+            template_folder="templates" ) # Folder for HTML templates)
 
 @app.get("/")
 def index_get():
