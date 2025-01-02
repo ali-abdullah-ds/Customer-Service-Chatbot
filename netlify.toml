@@ -1,14 +1,9 @@
-# Netlify configuration for FastAPI app
 [build]
-  # No build command needed for FastAPI
-  publish = "static"
-
-[dev]
-  command = "uvicorn main:app --reload --host=0.0.0.0 --port=8888"
-  port = 8888
-  targetPort = 50100
+  # Specify the root directory containing your Flask app
+  publish = "static"  # Location of your static files
+  command = "python3 -m flask run"  # Command to run your Flask app
 
 [[redirects]]
   from = "/*"
-  to = "/"
+  to = "/index.html"  # Entry point for static files or templates
   status = 200
