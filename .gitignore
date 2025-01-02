@@ -1,0 +1,6 @@
+.venv
+train.py
+training_result.png
+test.ipynb
+data.pth
+intents.json
