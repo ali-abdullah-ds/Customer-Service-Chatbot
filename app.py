@@ -1,7 +1,8 @@
 from flask import Flask, render_template, request, jsonify
 from chat import get_response
 from flask_cors import CORS
-from gevent.pywsgi import WSGIServer
+import toml
+
 
 
 app = Flask(__name__, 
@@ -23,6 +24,5 @@ def predict():
 
 
 if __name__ == "__main__":
-    app.run()
-    # http_server = WSGIServer(('', 5000), app)
-    # http_server.serve_forever()
+    from waitress import serve
+    serve(app, host="0.0.0.0", port=50100, threads=2)
